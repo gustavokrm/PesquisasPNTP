@@ -6,11 +6,17 @@ Esse page template cria uma busca por pastas no Plone, de forma que se você tiv
 # Como instalar:
 
 Vá na interface de gerência do Zope, /manage
+
 Portal Skins > Custom
+
 Add page template
-Coloque um nome e clique em add and edit.
+
+Coloque o nome: PesquisasPNTP, clique em add and edit.
+
 Cole o código e salve. 
 
-Vá agora na pasta em que você quer criar a página de pesquisa e adicione um link, e coloque, no link, o caminho completo para a pasta:
-www.cidade.leg.br/transparencia/licitacoes/pesquisaPNTP
+Vá agora na pasta em que você quer criar a página de pesquisa e adicione um link, e coloque, no link, o caminho completo para a pasta, com o nome do page template no final:
+
+Exemplo: www.cidade.leg.br/transparencia/licitacoes/pesquisaPNTP
+
 Assim o Plone vai buscar arquivos e pastas diretamente naquela pasta onde o link foi colocado.
