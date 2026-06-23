@@ -11,6 +11,7 @@
             Os resultados contêm as informações e é possível baixar diretamente o documento clicando no link correspondente.<br>
             Mais informações podem ser obtidas no portal da transparência <a href="https://transparencia.tapira.mg.leg.br/#/licitacoes">clicando aqui.</a>
         </p>
+        <p><strong>Atualizado em 10 de junho de 2026</strong></p>
 
         <form method="get">
             <div class="pesquisa-materias">
@@ -28,7 +29,7 @@
                 <div class="grupo-campo">
                     <label for="selecao-ano">Selecione o ano:</label>
                     <select name="ano" id="selecao-ano" class="selecao-ano">
-                        <option value="">-- Todos --</option>
+                        <option value="">Selecione o ano</option>
                         <option value="2026" tal:attributes="selected python:request.get('ano') == '2026' and 'selected' or None"> 2026 </option>
                         <option value="2025" tal:attributes="selected python:request.get('ano') == '2025' and 'selected' or None"> 2025 </option>
                         <option value="2024" tal:attributes="selected python:request.get('ano') == '2024' and 'selected' or None"> 2024 </option>
@@ -42,7 +43,7 @@
                 <input type="button" value="Limpar" class="botao-limpar" onclick="window.location.href=window.location.pathname;" />
             </div>
         </form>
-
+        
         <div tal:define="
             portal python:context.portal_url.getPortalObject();
             catalog python:portal.portal_catalog;
@@ -54,7 +55,7 @@
             tem_busca python:termo or ano;
 
             base_query python:{
-                'portal_type': ['File', 'ATFile', 'Folder', 'ATFolder'],
+                'portal_type': ['Folder', 'ATFolder'],
                 'path': {'query': caminho, 'depth': -1},
                 'sort_on': 'created',
                 'sort_order': 'reverse'
